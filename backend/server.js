@@ -58,7 +58,7 @@ const server = app.listen(
 const io = new Server(server, {
   pingTimeout: 60000, //The amount of time it will wait while being inactive before it goes off to save the bandwidth
   cors: {
-    origin: "https://zippy-vacherin-545e12.netlify.app/", //http://localhost:3000
+    origin: "https://zippy-vacherin-545e12.netlify.app", //http://localhost:3000
   },
 });
 
