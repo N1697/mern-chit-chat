@@ -13,6 +13,7 @@ import path from "path";
 
 const app = express();
 app.use(express.json()); //Accept json data
+app.use(cors());
 dotenv.config();
 connectDB();
 
