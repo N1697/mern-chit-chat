@@ -60,7 +60,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:3000",
-      "https://heartfelt-syrniki-1e37ae.netlify.app",
+      "https://heartfelt-syrniki-1e37ae.netlify.app/",
     ], //http://localhost:3000
   },
 });
