@@ -121,7 +121,7 @@ const SignUp = () => {
 
       //When sending data from frontend to backend, use Axios
       const { data } = await axios.post(
-        "/api/user",
+        "https://chit-chat-u1xp.onrender.com/api/user",
         //The user controller registerUser() will take the below object to register the new user,
         //then the backend returns the new created user with a JWT and store it in 'data'.
         {

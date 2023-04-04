@@ -46,7 +46,7 @@ const Login = () => {
         },
       };
       const { data } = await axios.post(
-        "/api/user/login",
+        "https://chit-chat-u1xp.onrender.com/api/user/login",
         //The user controller authUser() will take the below object to authenticate the user, then the backend returns the user with a JWT and store it in 'data'.
         {
           email,
