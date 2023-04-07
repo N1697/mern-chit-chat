@@ -64,8 +64,8 @@ const Login = () => {
       //Take the 'data' and store it in localStorage
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      history.push("/chats"); //When the user has been successfully logged in, push the user to the ChatPage
       window.location.reload(); // Reload the page after login to get the value for 'loggedUser' after the userEffect in MyChats ran
+      history.push("/app"); //When the user has been successfully logged in, push the user to the ChatPage
     } catch (error) {
       toast({
         title: "Error Occurs",

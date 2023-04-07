@@ -147,8 +147,8 @@ const SignUp = () => {
       setLoading(false);
 
       //When the user has been successfully registered, log in and push the user to the ChatPage
-      history.push("/chats");
       window.location.reload(); // Reload the page after signup to get the value for 'loggedUser' after the userEffect in MyChats ran
+      history.push("/app");
     } catch (error) {
       toast({
         title: "Error Occurs",

@@ -74,7 +74,10 @@ const SideDrawer = () => {
         },
       };
 
-      const { data } = await Axios.get(`api/user?search=${search}`, config);
+      const { data } = await Axios.get(
+        `https://chit-chat-u1xp.onrender.com/api/user?search=${search}`,
+        config
+      );
       //data = 'users' - an array returned from backend
 
       setLoading(false);
@@ -104,7 +107,11 @@ const SideDrawer = () => {
         },
       };
 
-      const { data } = await Axios.post("/api/chat", { userID }, config);
+      const { data } = await Axios.post(
+        "https://chit-chat-u1xp.onrender.com/api/chat",
+        { userID },
+        config
+      );
       //userID will be used in accessChat() controller in chatController.js
       //config will be used in protected() authMiddleware
       //data = "FullChat" that is returned from backend

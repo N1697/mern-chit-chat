@@ -24,7 +24,10 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await Axios.get("/api/chat", config);
+      const { data } = await Axios.get(
+        "https://chit-chat-u1xp.onrender.com/api/chat",
+        config
+      );
       //data = "chats" returned from backend
       console.log(data);
       setChats(data);

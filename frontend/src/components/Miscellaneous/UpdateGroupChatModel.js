@@ -58,7 +58,7 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
       };
 
       const { data } = await Axios.put(
-        "/api/chat/rename",
+        "https://chit-chat-u1xp.onrender.com/api/chat/rename",
         {
           chatID: selectedChat._id,
           newName: groupChatName,
@@ -108,7 +108,10 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
         },
       };
 
-      const { data } = await Axios.get(`/api/user?search=${search}`, config);
+      const { data } = await Axios.get(
+        `https://chit-chat-u1xp.onrender.com/api/user?search=${search}`,
+        config
+      );
       //data = 'users' array returned from the backend by 'allUsers' controller
       //search = user name/email
 
@@ -163,7 +166,7 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
       };
 
       const { data } = await Axios.put(
-        "/api/chat/add",
+        "https://chit-chat-u1xp.onrender.com/api/chat/add",
         {
           userID: userToAdd._id,
           chatID: selectedChat._id,
@@ -214,7 +217,7 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
       };
 
       const { data } = await Axios.put(
-        "/api/chat/remove",
+        "https://chit-chat-u1xp.onrender.com/api/chat/remove",
         {
           userID: userToRemove._id,
           chatID: selectedChat._id,

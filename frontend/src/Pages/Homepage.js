@@ -26,7 +26,7 @@ const Homepage = () => {
 
     //Check if the user is logged-in, redirect the user to the ChatPage page
     if (user) {
-      history.push("/chats");
+      history.push("/app");
     }
   }, [history]);
 

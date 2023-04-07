@@ -58,7 +58,7 @@ const ChatItem = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await Axios.get(
-        `/api/message/${selectedChat._id}`,
+        `https://chit-chat-u1xp.onrender.com/api/message/${selectedChat._id}`,
         config
       );
       //data = 'messages' array sent back from the back-end
@@ -110,7 +110,7 @@ const ChatItem = ({ fetchAgain, setFetchAgain }) => {
          */
 
         const { data } = await Axios.post(
-          "/api/message",
+          "https://chit-chat-u1xp.onrender.com/api/message",
           {
             chatID: selectedChat._id,
             messageContent: newMessage,

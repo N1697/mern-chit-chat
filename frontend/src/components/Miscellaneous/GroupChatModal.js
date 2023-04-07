@@ -49,7 +49,10 @@ const GroupChatModal = ({ children }) => {
         },
       };
 
-      const { data } = await Axios.get(`/api/user?search=${search}`, config);
+      const { data } = await Axios.get(
+        `https://chit-chat-u1xp.onrender.com/api/user?search=${search}`,
+        config
+      );
       //data = 'users' array returned from the backend by 'allUsers' controller
 
       console.log(data);
@@ -133,7 +136,7 @@ const GroupChatModal = ({ children }) => {
       };
 
       const { data } = await Axios.post(
-        "/api/chat/group",
+        "https://chit-chat-u1xp.onrender.com/api/chat/group",
         {
           chatName: groupChatName,
           users: JSON.stringify(selectedUsers.map((user) => user._id)),
